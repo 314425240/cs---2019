@@ -1,0 +1,275 @@
+body,
+div,
+span,
+p,
+a,
+img,
+input,
+ul,
+li,
+strong,
+del,
+i,
+em,
+ins,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+li {
+  list-style: none;
+}
+input {
+  border: none;
+  outline: none;
+}
+img {
+  border: none;
+  vertical-align: middle;
+}
+i {
+  font-style: normal;
+}
+.clearfix::after {
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+.clearfix {
+  *zoom: 1;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+body {
+  position: relative;
+  overflow-y: hidden;
+}
+.warpper {
+  position: relative;
+}
+.warpper .nav {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 70px;
+  background: url('../首页图片/顶部虚化.jpg');
+}
+.warpper .nav #logo {
+  position: absolute;
+  width: 107px;
+  left: 50px;
+  top: 10px;
+}
+.warpper .nav .menu {
+  position: absolute;
+  height: 70px;
+  left: 285px;
+}
+.warpper .nav .menu a {
+  font-size: 22px;
+  color: white;
+  line-height: 67px;
+  margin-right: 50px;
+  height: 69px;
+  display: block;
+  float: left;
+}
+.warpper .nav .menu a .line {
+  width: 0;
+  height: 4px;
+  background: linear-gradient(to right, skyblue, pink, orange);
+}
+.warpper .nav .download {
+  position: absolute;
+  right: 0;
+  width: 260px;
+  height: 69px;
+}
+.warpper .nav .download img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.warpper .nav .download #img0 {
+  width: 80%;
+  margin-left: 10%;
+}
+.warpper #section1 {
+  box-sizing: border-box;
+  display: flex;
+  height: 925px;
+  margin: 0 auto;
+}
+.warpper #section1 .canterBanner {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+}
+.warpper #section1 .bg-video {
+  width: 100%;
+  position: fixed;
+}
+.warpper #section1 .bg-video video {
+  position: absolute;
+  left: 50%;
+  height: 970px;
+  margin-left: -960px;
+}
+.warpper #section1 .centerPc {
+  position: fixed;
+  left: 50%;
+  margin-left: -332px;
+  top: 310px;
+}
+.warpper .daosanjiao {
+  position: fixed;
+  z-index: 99;
+  top: 500px;
+  left: 50%;
+  margin-left: -100px;
+  cursor: pointer;
+}
+.warpper .daosanjiao img {
+  width: 200px;
+}
+.warpper .slide-Float {
+  position: fixed;
+  right: 0;
+  top: 100px;
+  display: none;
+  z-index: 500;
+  opacity: 0;
+}
+.warpper .slide-Float li {
+  width: 0;
+  height: 72px;
+  text-align: right;
+  position: relative;
+}
+.warpper .slide-Float li:first-child a {
+  font-size: 60px;
+  right: -120px;
+}
+.warpper .slide-Float li:first-child .line {
+  width: 40px;
+  right: -170px;
+}
+.warpper .slide-Float li a {
+  font-size: 34px;
+  color: white;
+  line-height: 72px;
+  position: absolute;
+  right: -130px;
+}
+.warpper .slide-Float li .line {
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  right: -170px;
+  top: 0;
+  margin: 36px 10px 0 10px;
+}
+.warpper .g-container {
+  width: 100%;
+  height: 467px;
+  overflow: hidden;
+  position: relative;
+  z-index: 400;
+  bottom: -467px;
+}
+.warpper .g-container .ul1 {
+  left: 50%;
+  margin-left: -785px;
+  position: fixed;
+  width: 1570px;
+  height: 100%;
+  z-index: 400;
+}
+.warpper .g-container .ul1 .date {
+  font-size: 68px;
+  color: white;
+  width: 160px;
+  height: 106px;
+  position: fixed;
+  margin-top: 170px;
+  left: 50px;
+}
+.warpper .g-container .ul1 .xian {
+  height: 467px;
+  width: 122px;
+  position: fixed;
+  left: 200px;
+}
+.warpper .g-container .ul1 .quan {
+  left: 203px;
+  position: fixed;
+  margin-top: -70px;
+}
+.warpper .g-container .img-box {
+  height: 466px;
+}
+.warpper .g-container .img-box .move {
+  margin-top: -100px;
+}
+.warpper .g-container .img-box ul {
+  height: 400px;
+}
+.warpper .g-container .img-box ul .img {
+  height: 466px;
+  width: 650px;
+  margin: 0 auto;
+}
+.warpper .g-container .img-box ul .img img {
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.warpper .g-container .img-box ul .img .text {
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  font-size: 15px;
+  margin: 0 auto;
+  width: 626px;
+  height: 60px;
+  background-color: #b94032;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.warpper .g-container .img-box ul .img .text i {
+  position: absolute;
+  left: 572px;
+  bottom: 10px;
+  opacity: 1;
+}
+.warpper .g-container .img-box1 ul {
+  background: none;
+}
+.warpper .g-container .img-box1 ul .img img {
+  position: absolute;
+  left: 480px;
+  margin-top: 170px;
+}

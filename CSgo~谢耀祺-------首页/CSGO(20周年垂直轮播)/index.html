@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CS 20周年系列活动</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <script src="./js/index.js"></script>
+    <script src="./js/animation.js"></script>
+    <script src="./js/jquery-1.12.4.js"></script>
+    <script src="./js/碎片.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div class="warpper">
+        <!-- 大阪心 -->
+        <div class="nav">
+            <a href="javascript:;">
+                <img src="./首页图片/logo.png" alt="" id="logo">
+            </a>
+            <div class="menu">
+                <a href="../../CSgo~官网/guanwang.html">进入官网
+                    <div class="line"></div>
+                </a>
+                <a href="javascript:;">注册账号
+                    <div class="line"></div>
+                </a>
+                <a href="../../CSgo~熊大/个人中心/index.html">游戏充值
+                    <div class="line"></div>
+                </a>
+                <a href="http://cs.wanmei.com/getServicesByGameType?gametype=52" target="_blank">客服中心
+                    <div class="line"></div>
+                </a>
+                <a href="../../CSgo~军需商店/html文件/index.html">军需商店
+                    <div class="line"></div>
+                </a>
+            </div>
+            <a href="javascript:;" class="download">
+                <img id="img0" src="./首页图片/cslogo.png" alt="" style="opacity: 0">
+                <img id="img1" src="./首页图片/b2f2e383d9609d1952eb57c0bd0e5ff81558923126.jpg" alt="" style="opacity: 1">
+                <!-- <img src="./首页图片/cslogo.png" alt=""> -->
+            </a>
+        </div>
+        <!-- 导航栏js部分 进度条 -->
+        <script>
+            $('.menu>a').mouseover(function () {
+                var line = $('menu>a>.line')[0];
+                animationSlow(this.children[0], { width: 87 });
+                $(this).siblings().css('opacity', '.7')
+                // $(this).css('boxShadow', '0 0 2px 1px rgb(206, 213, 216,.5) inset')
+            })
+            $('.menu>a').mouseleave(function () {
+                var line = $('menu>a>.line')[0];
+                animationSlow(this.children[0], { width: 0 });
+                $(this).siblings().css('opacity', '1')
+                $(this).css('boxShadow', 'none')
+
+            })
+            // 右上角下载框
+            $('.download>#img1').mouseover(function () {
+                var img0 = $('.download>#img0')[0];
+                var img1 = $('.download>#img1')[0];
+                animationSlow(img0, { opacity: 1 })
+                animationSlow(img1, { opacity: 0 })
+            })
+            $('.download>#img1').mouseout(function () {
+                var img0 = $('.download>#img0')[0];
+                var img1 = $('.download>#img1')[0];
+                animationSlow(img0, { opacity: 0 })
+                animationSlow(img1, { opacity: 1 })
+            })
+        </script>
+        <!-- 导航栏结束 -->
+        <div id="section1">
+            <div class="canterBanner">
+            </div>
+            <div class="bg-video">
+
+                <video loop="" autoplay="" preload="" muted="">
+                    <source type="video/mp4" src="./视频/版心视频.mp4">
+                </video>
+            </div>
+            <img src="./首页图片/img-slogan.png" alt="" class="centerPc">
+            <div class="daosanjiao">
+                <img src="./image/daosanjiao.png" alt="">
+            </div>
+        </div>
+        <!-- 三角箭头动画 -->
+        <script>
+            setInterval(function () {
+                if ($('.daosanjiao')[0].offsetTop == 500) {
+                    $('.daosanjiao').animate({ top: 520, opacity: 0 })
+                }
+                console.log();
+                if ($('.daosanjiao')[0].offsetTop == 520) {
+                    $('.daosanjiao').css('top', 500)
+                    $('.daosanjiao').animate({ opacity: 1 })
+                }
+            }, 500)
+            $('.daosanjiao').click(function () {
+                $('.canterBanner').stop().animate({ opacity: 0.6 })
+                $('.nav').stop().animate({ opacity: 0 })
+                $('.canterBanner').css('zIndex', '300');
+                $('.daosanjiao').css('display', 'none')
+                $('.g-container>ul').stop().animate({ bottom: target - 466 });
+                $('.g-container').show()
+            })
+
+        </script>
+
+        <!-- 滚轮事件让背景透明度加深  版心视频消失 -->
+        <script>
+            var index = 0;
+            var sum = 0;
+            var target = 0;
+            $('body')[0].onmousewheel = function (e) {
+
+                if (e.wheelDelta == -120) {
+                    $('.move').stop().animate({marginLeft:20})
+                    $('.canterBanner').stop().animate({ opacity: 0.6 })
+                    $('.nav').stop().animate({ opacity: 0 });
+                    $('.canterBanner').css('zIndex', '300');
+                    $('.daosanjiao').css('display', 'none')
+                    $('.g-container>ul').stop().animate({ bottom: target - 466 });
+                    $('.g-container').fadeIn()
+                    if (index < $('.slide-Float>ul>li').length &&target < 3262) {
+                        index++
+                        sum += -120;
+                        target += 466
+                    } else {
+                        return
+                    }
+                    //1.开始给右侧边栏注册滚轮下显示
+                    $('.slide-Float').css('display', 'block').stop().animate({ opacity: .8, width: 195 })
+                    //2.给右侧日期栏增加对应变大动画
+                    $('.slide-Float>ul>li>a').eq(index - 1).stop().animate({ fontSize: 60, right: -120 })
+                    $('.slide-Float>ul>li>.line').eq(index - 1).stop().animate({ width: 35 })
+                    $('.slide-Float>ul>li').eq(index - 1).siblings().children('a').stop().animate({ fontSize: 34 });
+                    $('.slide-Float>ul>li').eq(index - 1).siblings().children('.line').stop().animate({ width: 20 });
+
+                    console.log(index);
+
+                    //3.开始滚轮轮播图
+                }//滚轮滚下的时候
+
+
+                if (e.wheelDelta == 120) {
+                    //1.开始给右侧边栏注册滚轮上消失
+
+                    if (sum == -120) {
+
+                        
+                        $('.canterBanner').stop().animate({ opacity: 0 })
+                        $('.nav').stop().animate({ opacity: 1 })
+                        setTimeout(function () {
+                            $('.canterBanner').css('zIndex', '99');
+                        }, 500)
+                        $('.daosanjiao').css('display', 'block')
+                        $('.slide-Float').stop().animate({ opacity: 0, width: 0 }).css('display', 'none')
+                        $('.g-container').fadeOut()
+                    }
+                    if (index > 0) {
+
+                        index--
+                        sum += 120;
+                        target += -466
+                    } else {
+                        return 
+                    }
+                    //2. 日期栏滚动效果变大
+                    $('.slide-Float>ul>li>a').eq(index ).stop().animate({ fontSize: 60, right: -130 })
+                    $('.slide-Float>ul>li>.line').eq(index ).stop().animate({ width: 35 })
+                    $('.slide-Float>ul>li').eq(index ).siblings().children('a').stop().animate({ fontSize: 34 });
+                    $('.slide-Float>ul>li').eq(index ).siblings().children('.line').stop().animate({ width: 20 });
+
+                    console.log(index);
+
+                    //3. 滚轮轮播
+                    $('.g-container>ul').stop().animate({ bottom: target - 467 });
+
+                }//滚轮滚上的时候
+
+            };
+
+            //拖拽轮播图
+
+
+        </script>
+
+        <div class="slide-Float">
+            <ul>
+                <li>
+                    <a href="javascript:;">4.19 </a>
+                    <div class="line"></div>
+                </li>
+                <li><a href="javascript:;">5.10 </a>
+                    <div class="line"></div>
+                </li>
+                <li><a href="javascript:;">5.20 </a>
+                    <div class="line"></div>
+                </li>
+                <li><a href="javascript:;">6.03 </a>
+                    <div class="line"></div>
+                </li>
+                <li><a href="javascript:;">6.12 </a>
+                    <div class="line"></div>
+                </li>
+                <li><a href="javascript:;">6.17 </a>
+                    <div class="line"></div>
+                </li>
+                <li><a href="javascript:;">6.18 </a>
+                    <div class="line"></div>
+                </li>
+                <li><a href="javascript:;">6.19 </a>
+                    <div class="line"></div>
+                </li>
+            </ul>
+        </div>
+        <!-- //侧边固定日期栏js部分 -->
+        <script>
+
+            // var target = 467
+
+            //4. 鼠标经过右侧日期栏对应的图片显示
+            $('.slide-Float>ul>li').click(function () {
+                var indexLi = $(this).index();
+
+                $('.slide-Float>ul>li>a').eq(indexLi).stop().animate({ fontSize: 60, right: -130 })
+                $('.slide-Float>ul>li>.line').eq(indexLi).stop().animate({ width: 30 })
+                $('.slide-Float>ul>li').eq(indexLi).siblings().children('a').stop().animate({ fontSize: 34 });
+                $('.slide-Float>ul>li').eq(indexLi).siblings().children('.line').stop().animate({ width: 18 });
+                //点击右侧如期栏对应的图片显示
+                $('.g-container>ul').stop().animate({ bottom: 467 * (indexLi - 1) })
+
+            })
+            //5. 点击图片 跳转
+        </script>
+        <div class="g-container">
+            <ul class="ul1">
+                <li class="img-box">
+                    <ul>
+                        <li class="date move">4-19</li>
+                        <li class="quan move"><img src="./image/baidian1.png" alt=""></li>
+                        <li class="xian move"><img src="./image/baidianxian1.png" alt=""></li>
+                        <li class="img"><img src="./image/0b3f5e8fa43c41117634d3ebfb1f056b1557472860.jpg" alt="">
+                            <div class="text">
+                                <div class="caption">
+                                    <p>将诞生CS:GO国服第一件来自玩家的官方周边，优秀作品制成实体T恤公开发售！</p>
+                                    <p>4月19日-5月24日：CS 20周年主题T恤设计大赛</p>
+                                    <i><img src="./image/baijiantou.png" alt=""></i>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="img-box">
+                    <ul>
+                        <li class="date move">5-10</li>
+                        <li class="xian move"><img src="./image/baidianxian1.png" alt=""></li>
+                        <li class="img"><img src="./image/a1a7730a240c871a7fd586e92a8d66511557471783.jpg" alt="">
+                            <div class="text">
+                                <div class="caption">
+                                    <p>最独特的“欧皇”与“非酋”即将诞生，用手机记录下它们的觉醒时刻吧！</p>
+                                    <p>5月10日-5月22日：#宠物开箱#短视频有奖征集</p>
+                                    <i><img src="./image/baijiantou.png" alt=""></i>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="img-box">
+                    <ul>
+                        <li class="date move">5-20</li>
+                        <li class="xian move"><img src="./image/baidianxian1.png" alt=""></li>
+                        <li class="img"><img src="./image/606ff18f78ff9aad601b675e822a04701557478375.jpg" alt="">
+                            <div class="text">
+                                <div class="caption">
+                                    <p>哔哩哔哩精英集结 ，【集锦】【攻略】【娱乐】三大平行赛道已正式开启！</p>
+                                    <p>5月20日-6月20日："我们的20周年" CS:GO视频创作大赛</p>
+                                    <i><img src="./image/baijiantou.png" alt=""></i>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="img-box">
+                    <ul>
+                        <li class="date move">6-03</li>
+                        <li class="xian move"><img src="./image/baidianxian1.png" alt=""></li>
+                        <li class="img"><img src="./image/dda6f4f2fccc4fea3d497b81dcf5ccb51557471745.jpg" alt="">
+                            <div class="text">
+                                <div class="caption">
+                                    <p>最独特的“欧皇”与“非酋”即将诞生，用手机记录下它们的觉醒时刻吧！</p>
+                                    <p>5月10日-5月22日：#宠物开箱#短视频有奖征集</p>
+                                    <i><img src="./image/baijiantou.png" alt=""></i>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="img-box">
+                    <ul>
+                        <li class="date move">6-12</li>
+                        <li class="xian move"><img src="./image/baidianxian1.png" alt=""></li>
+                        <li class="img"><img src="./image/606ff18f78ff9aad601b675e822a04701557478375.jpg" alt="">
+                            <div class="text">
+                                <div class="caption no-arrow">
+                                    <p style="padding-top: 10px;">周边商城上新，活动即将开始</p>
+                                    <i><img src="./image/baijiantou.png" alt=""></i>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="img-box">
+                    <ul>
+                        <li class="date move">6-17</li>
+                        <li class="xian move"><img src="./image/baidianxian1.png" alt=""></li>
+                        <li class="img"><img src="./image/a1a7730a240c871a7fd586e92a8d66511557471783.jpg" alt="">
+                            <div class="text">
+                                <div class="caption no-arrow">
+                                    <p style="padding-top: 10px;">周边商城上新，活动即将开始</p>
+                                    <i><img src="./image/baijiantou.png" alt=""></i>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="img-box">
+                    <ul>
+                        <li class="date move">6-18</li>
+                        <li class="xian move"><img src="./image/baidianxian1.png" alt=""></li>
+                        <li class="img"><img src="./image/e4571de4feab7f7e335a56bd1aeccdf51557471524.png" alt="">
+                            <div class="text">
+                                <div class="caption no-arrow">
+                                    <p style="padding-top: 10px;">周边商城上新，活动即将开始</p>
+                                    <i><img src="./image/baijiantou.png" alt=""></i>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="img-box img-box1">
+                    <ul>
+                        <li class="date move">6-19</li>
+                        <li class="xian move"><img src="./image/baidianxian1.png" alt=""></li>
+                        <li class="img"><img src="./image/TOBECONTINUED.png" alt=""></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+
+    <!-- 图片的小箭头动画效果 -->
+    <script>
+        var timeID = null;
+
+        var $jiantou = $('.img-box>ul>.img>.text>.caption>i');
+        $('.img').hover(function () {
+            var index0 = $(this).parent().parent().index()
+
+            clearInterval(timeID)
+            timeID = setInterval(function () {
+                if ($jiantou[index0].offsetLeft == 572) {
+                    $jiantou.stop().eq(index0).animate({ opacity: 0, left: 582 })
+                } else if ($jiantou[index0].offsetLeft == 582) {
+                    $jiantou.stop().eq(index0).css('left', 572)
+                    $jiantou.stop().eq(index0).animate({ opacity: 1 })
+                }
+            }, 300)
+        })
+        $('.img').mouseleave(function () {
+            var $jiantou = $('.img-box>ul>.img>.text>.caption>i');
+            $jiantou.stop().animate({ opacity: 1, left: 572 })
+            clearInterval(timeID)
+        })
+
+
+    </script>
+</body>
+
+</html>

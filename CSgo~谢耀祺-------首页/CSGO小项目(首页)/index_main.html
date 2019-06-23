@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable = no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSGO官方网站 - 反恐精英：全球攻势 - 头号特训空降突袭</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <script src="./js/index.js"></script>
+    <script src="./js/animation.js"></script>
+    <script src="./js/jquery-1.12.4.js"></script>
+    <script src="./js/碎片.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div class="warpper"> 
+        <!-- 大阪心 -->
+        <div class="nav">
+            <a href="javascript:;">
+                <img src="./首页图片/logo.png" alt="" id="logo">
+            </a>
+            <div class="menu">
+                <a href="../../CSgo~官网/guanwang.html">进入官网
+                    <div class="line"></div>
+                </a>
+                <a href="javascript:;">注册账号
+                    <div class="line"></div>
+                </a>
+                <a href="../../CSgo~熊大/个人中心/index.html">游戏充值
+                    <div class="line"></div>
+                </a>
+                <a href="http://cs.wanmei.com/getServicesByGameType?gametype=52" target="_blank">客服中心
+                    <div class="line"></div>
+                </a>
+                <a href="../../CSgo~军需商店/html文件/index.html">军需商店
+                    <div class="line"></div>
+                </a>
+            </div>
+            <a href="javascript:;" class="download">
+                <img id="img0" src="./首页图片/cslogo.png" alt="" style="opacity: 0">
+                <img id="img1" src="./首页图片/b2f2e383d9609d1952eb57c0bd0e5ff81558923126.jpg" alt="" style="opacity: 1">
+                <!-- <img src="./首页图片/cslogo.png" alt=""> -->
+            </a>
+        </div>
+        <!-- 导航栏js部分 进度条 -->
+        <script>
+            $('.menu>a').mouseover(function () {
+                var line = $('menu>a>.line')[0];
+                animationSlow(this.children[0], { width: 87 });
+                $(this).siblings().css('opacity', '.7')
+                // $(this).css('boxShadow', '0 0 2px 1px rgb(206, 213, 216,.5) inset')
+            })
+            $('.menu>a').mouseleave(function () {
+                var line = $('menu>a>.line')[0];
+                animationSlow(this.children[0], { width: 0 });
+                $(this).siblings().css('opacity', '1')
+                $(this).css('boxShadow', 'none')
+
+            })
+            // 右上角下载框
+            $('.download>#img1').mouseover(function () {
+                var img0 = $('.download>#img0')[0];
+                var img1 = $('.download>#img1')[0];
+                animationSlow(img0, { opacity: 1 })
+                animationSlow(img1, { opacity: 0 })
+            })
+            $('.download>#img1').mouseout(function () {
+                var img0 = $('.download>#img0')[0];
+                var img1 = $('.download>#img1')[0];
+                animationSlow(img0, { opacity: 0 })
+                animationSlow(img1, { opacity: 1 })
+            })
+        </script>
+        <!-- 导航栏结束 -->
+        <div id="section1">
+            <a href="javascript:;" class="video-btn j_video_btn" style="opacity: .7"></a>
+            <div class="bg-video">
+                <video loop="" autoplay="" preload="" muted="">
+                    <source type="video/mp4" src="./视频/版心视频.mp4">
+                </video>
+            </div>
+            <img src="./首页图片/img-slogan.png" alt="" class="centerPc">
+            <div class="schedule-wrapper">
+
+                <div class="schedule-box">
+                    <div class="float">
+                        <ul>
+                            <li style="opacity: 0;" index="1" id="imgI" class="i1"></li>
+                            <li style="opacity: 0;" index="2" id="imgI" class="i2"></li>
+                            <li style="opacity: 0;" index="3" id="imgI" class="i3"></li>
+                            <li style="opacity: 0;" index="4" id="imgI" class="i4"></li>
+                        </ul>
+                    </div>
+                    <ul>
+                        <li class="line-start">
+                            <div></div>
+                        </li>
+                        <li class="sc-dot">
+                            <div class="sc-date" data-id="1">4.19</div>
+                            <div class="line"></div>
+                        </li>
+                        <li class="sc-dot">
+                            <div class="sc-date" data-id="2">5.10</div>
+                            <div class="line"></div>
+
+                        </li>
+                        <li class="sc-dot">
+                            <div class="sc-date" data-id="3">5.20</div>
+                            <div class="line"></div>
+                        </li>
+                        <li class="sc-dot">
+                            <div class="sc-date" data-id="4">6.03</div>
+                            <div class="line"></div>
+                        </li>
+                        <li class="sc-dot disabled">
+                            <div class="sc-date" data-id="5">6.12</div>
+                            <div class="line"></div>
+                            <p class="sc-desc">即将开始</p>
+                        </li>
+                        <li class="sc-dot disabled">
+                            <div class="sc-date" data-id="6">6.17</div>
+                            <div class="line"></div>
+                            <p class="sc-desc">即将开始</p>
+                        </li>
+                        <li class="sc-dot disabled">
+                            <div class="sc-date" data-id="7">6.18</div>
+                            <div class="line"></div>
+                            <p class="sc-desc">即将开始</p>
+                        </li>
+                        <li class="sc-dot sc-dot-end disabled">
+                            <div class="sc-date" data-id="8">6.19</div>
+                            <div class="line"></div>
+                            <p class="sc-desc">即将开始</p>
+                        </li>
+                        <li class="line-end">
+                            <div></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 中间日期鼠标悬停显示图片js -->
+        <!-- 需求: 实现碎片化图片消失???? -->
+        <script>
+            var box = document.getElementsByClassName('sc-date')
+            var imgArr = [
+                './首页图片/1.png',
+                './首页图片/2.png',
+                './首页图片/3.png',
+                './首页图片/4.png',
+            ];
+
+            $('.schedule-box>ul>li>.sc-date').mouseenter(function () {
+                var index = $(this).parent().index();
+
+
+                if (index > 4 && index < 9) {
+                    var img0 = $('.schedule-box>.float>ul>li').eq(index - 5)[0];
+                    var p = $('.schedule-box>ul>li>p').eq(index - 5)[0];
+                    // console.log(p);
+                    var a = index - 5;
+                    // burst(img0, box, a);
+
+                    img0.style.background = 'url(' + imgArr[a] + ')'
+                    animationSlow(img0, { opacity: 1 });
+                    animationSlow(p, { opacity: 1 });
+                }
+            })
+            $('.schedule-box>ul>li>.sc-date').mouseleave(function () {
+                var index = $(this).parent().index();
+
+                if (index > 4 && index < 9) {
+                    var img0 = $('.schedule-box>.float>ul>li').eq(index - 5)[0];
+                    var p = $('.schedule-box>ul>li>p').eq(index - 5)[0];
+                    animationSlow(img0, { opacity: 0 });
+                    animationSlow(p, { opacity: 0 })
+                    var a = index - 5
+                    // burst(img0, box, a);
+                    // console.log(box[index-1]);
+                }
+            })
+        </script>
+        <!-- 海报背景结束 -->
+        <div id="section2">
+            <div class="bg"></div>
+            <div class="list">
+                <div class="item left">
+                    <a href="../CSGO(游戏资料)/html文件夹/游戏背景.html">
+                        <img src="./首页图片/左图片.png" alt="">
+                        <video loop="" preload="" muted="" style="display: none;">
+                            <source type="video/webm" src="./视频/LEFT_1_21.webm">
+                        </video>
+                    </a>
+                </div>
+                <div class="item mask right">
+                    <a href="javascript:;">
+                        <img src="./首页图片/右图片.png" alt="" id="Rimg">
+                        <video loop="" preload="" muted="">
+                            <source type="video/webm" src="./视频/RIGHT_1_20.webm">
+                        </video>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- 实现left和right鼠标移入移出视频播放 -->
+        <script>
+            $('.item.left').mouseenter(function () {
+                $('.item.left>a>img').css('display', 'none');
+                $('.item.left>a>video').css('display', 'block').trigger('play');
+                $('.item.right').css('opacity', .8)
+
+            })
+            $('.item.left').mouseleave(function () {
+                $('.item.left>a>video').css('display', 'block').trigger('pause');
+                $('.item.right').css('opacity', 1)
+
+            })
+            $('.item.right').mouseenter(function () {
+                $('.item.left').css('opacity', .8)
+                $('.item.right>a>img').css('display', 'none');
+                $('.item.right>a>video').css('display', 'block').trigger('play');
+            })
+            $('.item.right').mouseleave(function () {
+                $('.item.left').css('opacity', 1)
+                $('.item.right>a>video').css('display', 'block').trigger('pause');
+            })
+        </script>
+        <!-- 新兵指导站和反恐放映结束 -->
+        <div id="section3" class="clearfix">
+            <div class="list">
+                <div class="item">
+                    <h3>武器展示</h3>
+                    <a href="javascript:;">
+                        <div class="thumb"><img src="./首页图片/weapon.jpg" alt=""></div>
+                    </a>
+                </div>
+                <div class="item">
+                    <h3>活动专题</h3>
+                    <a href="javascript:;">
+                        <div class="thumb"><img src="./首页图片/33cc50dc3a3821c8197c4f209c84e3f51559532196.jpg" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="item last_item">
+                    <h3>攻略视频</h3>
+                    <a href="javascript:;">
+                        <div class="thumb"><img src="./首页图片/7b5c045609ee97ede1f5f30b75bf37681553496578.png" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="clearfix link-group">
+                <a href="javascript:;" class="left">进入官网</a>
+                <a href="javascript:;" class="right">下载游戏</a>
+            </div>
+        </div>
+        <script>
+            // console.log($('.item>a>.thumb>img'));
+            // 三个广告图片特效
+            $('.item>a>.thumb>img').mouseenter(function () {
+                var img = $(this)[0]
+
+                animationSlow(img, { marginTop: -5 })
+            })
+            $('.item>a>.thumb>img').mouseleave(function () {
+                var img = $(this)[0]
+
+                animationSlow(img, { marginTop: 0 })
+            })
+            //进入官网和下载游戏js
+            $('.link-group>a.left').mouseenter(function () {
+                var left = $('.link-group>a.left')[0];
+                animationSlow(left, { marginTop: -5 });
+                left.style.boxShadow = 'rgb(32, 31, 31) 0px 0px 3px'
+            })
+            $('.link-group>a.left').mouseleave(function () {
+                var left = $('.link-group>a.left')[0];
+                animationSlow(left, { marginTop: 0 });
+                left.style.boxShadow = 'none'
+            })
+            $('.link-group>a.right').mouseenter(function () {
+                var right = $('.link-group>a.right')[0];
+                animationSlow(right, { marginTop: -5 });
+                right.style.boxShadow = 'rgb(32, 31, 31) 0px 0px 3px'
+            })
+            $('.link-group>a.right').mouseleave(function () {
+                var right = $('.link-group>a.right')[0];
+                animationSlow(right, { marginTop: 0 });
+                right.style.boxShadow = 'none'
+            })
+        </script>
+        <!-- 底部三个广告结束 -->
+        <div id="section4">
+            <div class="links">
+                <a href="javascript:;" class="zzfu" target="_blank" title="自助服务"></a>
+                <a href="javascript:;" class="txzcx" target="_blank" title="通行证查询"></a>
+                <a href="javascript:;" class="zxkefu" target="_blank" title="在线客服"></a>
+                <a href="javascript:;" class="weibo" title="微博">
+                    <div><img src="./网页页面截图/二维码.png" alt="" id="saoma1"></div>
+                </a>
+                <a href="javascript:;" class="weixin" title="微信">
+                    <div><img src="./网页页面截图/二维码.png" alt="" id="saoma2"></div>
+                </a>
+                <a href="javascript:;" class="bbs" target="_blank" title="论坛"></a>
+                <a href="javascript:;" class="wanmeidz" target="_blank" title="完美对战"></a>
+            </div>
+        </div>
+    </div>
+    <!-- 侧栏固定定位广告20周年 -->
+    <div class="csgo-side-float">
+        <a href="javascript:;" class="lnk-close">
+            <img src="./首页图片/img-close18.png" alt="">
+        </a>
+        <a href="../CSGO(20周年垂直轮播)/index.html" class="lnk-img"><img
+                src="./首页图片/7d6cc9a9116bf238671bcf15f194c6ea1559113716.jpg" alt="">
+        </a>
+        <script>
+
+            var close = $('.csgo-side-float')[0];
+            var close0 = $('.lnk-close')[0];
+            burst('.csgo-side-float', close0)
+            $('.lnk-close').click(function () {
+                console.log(close);
+                setTimeout(function () {
+                    animationSlow(close, { opacity: 0, width: 50 })
+                }, 100)
+            });
+            $('.lnk-close>img').mouseover(function () {
+                animationSlow(this, { width: 20, marginLeft: -1 })
+            });
+            $('.lnk-close>img').mouseout(function () {
+                animationSlow(this, { width: 18, marginLeft: 0 })
+            });
+        </script>
+    </div>
+    <!-- 鼠标经过显示两个二维码 -->
+    <script>
+        $('.weibo').mouseenter(function () {
+            var saoma1 = $('#saoma1')[0]
+            $('#saoma1').css('display','block')
+            setTimeout(function(){
+                animationSlow(saoma1, { opacity: 1 });
+            },20)
+        })//微博显示二维码
+        $('.weibo>div').mouseenter(function () {
+            event.stopImmediatePropagation();
+        })//阻止事件捕捉
+        $('.weibo').mouseleave(function () {
+            var saoma1 = $('#saoma1')[0]
+            $('#saoma1').css('display','none')
+            setTimeout(function(){
+                animationSlow(saoma1, { opacity: 0 });
+            },20)
+        })//微博显示二维码
+        $('.weixin').mouseenter(function () {
+            var saoma2 = $('#saoma2')[0]
+            $('#saoma2').css('display','block')
+            setTimeout(function(){
+                animationSlow(saoma2, { opacity: 1 });
+            },20)
+        })//微信显示二维码
+        $('.weixin>div').mouseenter(function () {
+            event.stopImmediatePropagation();
+        })//阻止事件捕捉
+        $('.weixin').mouseleave(function () {
+            var saoma2 = $('#saoma2')[0]
+            $('#saoma2').css('display','none')
+            setTimeout(function(){
+                animationSlow(saoma2, { opacity: 0 });
+            },20)
+        })//微信显示二维码
+    </script>
+
+    <!-- 页面底部开始 -->
+    <div class="footer">
+        <div class="footer_a">
+            <a class="footer_left fl" href="javascript:;"><img src="" alt=""></a>
+            <a class="footer_md fl" href="javascript:;"><img src="" alt=""></a>
+            <div class="footer_right fl">© 完美世界 版权所有　Perfect World. All Rights Reserved.
+                <br>© 2012 Valve Corporation. All Rights reserved. Licensed to Perfect World Co., Ltd. in China
+            </div>
+            <p class="footer_bt">
+                京ICP备15025398号-2<a href="javascript:;">《网络文化经营许可证》编号： 京网文[2017]8929-1007号</a>
+                <br>
+                <a href="javascript:;"> <img src="images/icon-gamenettag.png" alt=""> 文网游进字[2017] 0084号</a><a
+                    href="javascript:;"></a>
+                新广出审[2017] 6738号 皖网文许字[2014]1281-020号 ISBN: 978-7-7979-0692-0 | <a href="javascript:;"> 家长监护</a> | <a
+                    href="javascript:;">
+                    纠纷处理</a>
+            </p>
+        </div>
+    </div>
+    <!-- 页面底部结束 -->
+
+    <div class="pop-mask" id="video_pop" style="display: none; opacity: 1;">
+        <div class="pop-container">
+            <i class="pop-close j_pop_close"><img src="./首页图片/img-close18.png" alt=""></i>
+            <video id="video" controls="" loop="">
+                <source type="video/webm" src="./视频/右上角小视频.webm">
+            </video>
+        </div>
+    </div>
+    <!-- 右上角点击视频部分 -->
+    <script>
+        // console.log(window.);
+        // burst0('#video',$('.pop-close')[0])
+        $('.video-btn.j_video_btn').click(function () {
+            $('#video_pop').css('display', 'block');
+            setTimeout(function () {
+                animationSlow($('.pop-container')[0], { width: 800 })
+            }, 200)
+            $('video').trigger('play');
+        })
+        $('.pop-close').click(function () {
+            // animationSlow($('#video_pop')[0],{width:0,height:0});
+            animationSlow($('.pop-container')[0], { width: 0 })
+            console.log($('#video')[0]);
+            setTimeout(function () {
+                $('#video_pop').css('display', 'none');
+            }, 800);
+            $('#video').trigger('pause');
+        })
+        // 右上角视频播放结束
+        //右上角视频移入鼠标显示
+        $('.j_video_btn').mouseenter(function () {
+            var videoBtn = $('.j_video_btn')[0]
+            $('.j_video_btn').css('opacity', '1');
+        })
+        $('.j_video_btn').mouseleave(function () {
+            $('.j_video_btn').css('opacity', '.7');
+        })
+
+    </script>
+
+
+</body>
+
+</html>

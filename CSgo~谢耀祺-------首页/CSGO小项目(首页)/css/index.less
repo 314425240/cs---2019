@@ -1,0 +1,476 @@
+@import "base";
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+.warpper {
+    position: relative;
+
+    .nav {
+        position: absolute;
+        z-index: 99;
+        width: 100%;
+        height: 70px;
+        background: url('../首页图片/顶部虚化.jpg');
+
+        #logo {
+            position: absolute;
+            width: 107px;
+            left: 50px;
+            top: 10px;
+        };
+        .menu {
+            position: absolute;
+            height: 70px;
+            left: 285px;
+            a {
+                font-size: 22px;
+                color: white;
+                line-height: 67px;
+                margin-right: 50px;
+                height: 69px;
+                display: block;
+                float: left;
+                .line {
+                    width: 0;
+                    height: 4px;
+                    background: linear-gradient(to right,skyblue,pink,orange)
+                }
+            }
+           
+        }
+        .download {
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+            }
+            #img0 {
+                width: 80%;
+                margin-left: 10%;
+            }
+            position: absolute;
+            right: 0;
+            width: 260px;
+            height: 69px;
+        }
+    }
+   //js实现鼠标经过放大
+    #section1 {
+        .bg-video {
+            width: 100%;
+            position: absolute;
+            video {
+                position: absolute;
+                left: 50%;
+                margin-left: -960px;
+            } //视频居中
+        }
+        .video-btn {
+            width: 160px;
+            height: 102px;
+            position: absolute;
+            top: 107px;
+            right: 27px;
+            background: url('../首页图片/右上角图片.png') no-repeat;
+            cursor: pointer;
+            z-index: 200;
+        }
+        box-sizing: border-box;
+        display: flex;
+        height: 925px;
+        margin: 0 auto;
+   
+        .centerPc {
+            position: absolute;
+            left: 50%;
+            margin-left: -332px;
+            top: 310px;
+        }
+    }
+    .schedule-wrapper {
+        width: 100%;
+        .float {
+            
+            width: 660px;
+            height: 210px;
+            position: absolute;
+            top:-220px;
+            right: 120px;
+            li#imgI {
+                position: absolute;
+                width: 395px;
+                height: 205px;
+                top: 0;
+            };
+            .i2 {
+                left: 100px;
+            }
+            .i3 {
+                left: 220px;
+            }
+            .i4 {
+                left: 340px;
+            }
+        }
+        .schedule-box {
+            position: absolute;
+            top: 750px;
+            width: 1220px;
+            height: 70px;
+            left: 50%;
+            margin-left: -610px;
+            ul {
+                margin: 0 auto;
+                height: 70px;
+                li {
+                    float: left;
+                    height: 70px;
+                    width: 120px;
+                    font-size: 20px;
+                    color: white;
+                    line-height: 70px;
+                    text-indent: 12px;
+                    p {
+                        opacity: 0;
+                        margin-left: -10px;
+                        font-size: 16px;
+                    }
+                    .line {
+                        width: 40px;
+                        height: 2px;
+                        background-color: white;
+                        position: absolute;
+                        top: 32px;
+                        margin-left: 74px;
+                    }
+
+                }
+                .sc-date {
+                    cursor: pointer;
+                    width: 66px;
+                    background: url('../首页图片/img-day.png') no-repeat;
+                }
+                .sc-dot:nth-child(n+6) .sc-date {
+                    background: url('../首页图片/img-day.png') no-repeat 0 -70px;
+                }
+                .line-start {
+                    background: url('../首页图片/img-day.png') no-repeat 0 -155px;
+                    div {
+                        width: 60px;
+                        height: 2px;
+                        margin:32px 0 0 55px;
+                        background-color: white;
+                    }
+                }
+                .line-end {
+                    background: url('../首页图片/img-day.png') no-repeat 50px -155px;
+                    div {
+                        width: 60px;
+                        height: 2px;
+                        margin:32px 0 0 5px;
+                        background-color: white;
+                    }
+                }
+                .sc-dot-end {
+                    width: 66px;
+                }
+            }
+        }
+    }
+    #section2 {
+        video {
+            display: none;
+        }
+        .bg {
+            background: url('../首页图片/bg_section2.jpg');
+        }
+        width: 100%;
+        .list {
+            box-sizing: border-box;
+            display: flex;
+            width: 100%;
+            margin-top: -1px;
+            .item {
+                width: 50%;
+                margin-right: -1px;
+                img {
+                    width: 100%;                
+                }
+                video {
+                    position: relative;
+                    width: 100%;
+                    z-index: 99;
+                }
+            }
+        }
+    }
+    #section3 {
+        padding: 20px 60px;
+        width: 100%;
+        background: url('../首页图片/btn_banner.jpg') center center;
+        .list {
+            height: 433px;
+            width: 100%;
+            display: flex;
+            box-sizing: border-box;
+        }
+
+        .item {
+            height: 433px;
+            width: 33%;
+            text-align: center;
+            padding: 10px;
+            margin-top: 50px;
+
+            img {
+                width: 100%;
+                min-height: 210px;
+                min-width: 383px;
+            }
+            h3 {
+                height: 60px;
+                font-size: 36px;
+                color: white;
+                margin-bottom: 20px;
+            }
+        }
+        .last_item {
+            margin-right: 0;
+        }
+        .link-group {
+            margin: 20px auto 20px;
+            width: 100%;
+            font-size: 50px;
+            height: 170px;
+            box-sizing: border-box;
+            display: flex;
+            a:not(:last-child) {
+                margin-right: 2.1978%;
+            }
+            a {
+                color: white;
+                display: block;
+                width: 50%;
+                // padding: 20px;
+                float: left;
+                height: 170px;
+                background-color: hsla(0, 0%, 100%, .3);
+                line-height: 170px;
+                text-align: center;
+                // &:hover {
+                //     margin-top: -5px;
+                //     box-shadow:rgb(32, 31, 31) 0px 0px 4px;
+                // }
+            }
+        }
+    }
+    #section4 {
+
+        .links {
+            width: 1300px;
+            margin: 0 auto;
+            padding-top: 94px;
+            padding-left: 30px;
+            height: 100%;
+            a {
+                background: url('../首页图片/icon_btns_61527069711fd664cbf1b730d2517961.png') top no-repeat;
+                display: inline-block;
+                width: 120px;
+                height: 44px;
+                text-decoration: none;
+                color: #000;
+                -webkit-tap-highlight-color: transparent;
+            }
+            .zzfu {
+                background-position: 0 0;
+                margin-right: 28px;
+            }
+            .txzcx {
+                background-position: -142px 0;
+                margin-right: 28px;
+            }
+            .zxkefu {
+                background-position: -300px 0;
+                margin-right: 108px;
+            }
+            .weibo {
+                background-position: -526px 0;
+                position: relative;
+                #saoma1 {
+                    opacity: 0;
+                    display: none;
+                    position: absolute;
+                    left: 50%;
+                    bottom: 45px;
+                    margin-left: -96px;
+                    
+                }
+            }
+            .weixin {
+                background-position: -652px 0;
+                position: relative;
+                #saoma2 {
+                    opacity: 0;
+                    display: none;
+                    position: absolute;
+                    left: 50%;
+                    bottom: 45px;
+                    margin-left: -96px;
+                    
+                }
+               
+            }
+            .bbs {
+                background-position: -770px 0;
+                margin-right: 100px;
+            }
+            .wanmeidz {
+                width: 190px;
+                background-position: -986px 0;
+            }
+            .zzfu:hover {
+                background-position: 0 -46px;
+                margin-right: 28px;
+            }
+            .txzcx:hover {
+                background-position: -142px -45px;
+                margin-right: 28px;
+            }
+            .zxkefu:hover {
+                background-position: -300px -46px;
+                margin-right: 108px;
+            }
+            .weibo:hover {
+                
+                background-position: -526px -44px;
+            }
+            .weixin:hover {
+                background-position: -652px -44px;
+                position: relative;
+            }
+            .bbs:hover {
+                background-position: -770px -44px;
+                margin-right: 100px;
+            }
+            .wanmeidz:hover {
+                width: 190px;
+                background-position: -986px -44px;
+            }  
+    }
+        height: 220px;
+        min-height: 220px;
+        background: url(../首页图片/虚化导航背景.jpg) 100% 100% no-repeat;
+    }
+}
+.csgo-side-float {
+    position: fixed;
+    right: 0;
+    top: 35%;
+    z-index: 100;
+    .lnk-close {
+        width: 18px;
+        height: 18px;
+        display: block;
+        position: absolute;
+        left: -22px;
+        top: 0;
+    }
+}
+// 底部栏
+
+
+/* 页面底部开始 */
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    background-color: #000;
+    .footer_a {
+        position: relative;
+        width: 1100px;
+        height: 32.8px;
+        margin: 40px auto 0px;
+    }
+    
+    .footer_a .footer_left,
+    .footer_md {
+        box-sizing: border-box;
+        padding: 0 12px;
+    }
+    
+    .footer_a .footer_left {
+        display: inline-block;
+        width: 178px;
+        height: 32.8px;
+    }
+    
+    .footer_a .footer_md {
+        width: 123px;
+        height: 32.8px;
+    }
+    
+    .footer_a .footer_right {
+        height: 32.8px;
+        color: rgb(149, 149, 149);
+        font-size: 12px;
+        margin-top: -2px;
+    }
+    
+    .footer_bt {
+        position: absolute;
+        left: 230px;
+        top: 45px;
+        font-size: 12px;
+        line-height: 1.5;
+        text-align: center;
+        color: rgb(85, 85, 85);
+    }
+    
+    .footer_bt a {
+        font-size: 12px;
+        color: rgb(75, 186, 250);
+    }
+    
+}
+
+
+/* 页面底部结束 */
+
+
+//右上角视频
+#video_pop{
+    text-align: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 9000;
+    .pop-container {
+        .pop-close {
+            position: absolute;
+            top: 0;
+            right:-25px;
+            cursor: pointer;
+
+            img {
+                width: 25px;
+            }
+        }
+        top: 150px;
+        position: relative;
+        width: 0;
+        height: 460px;
+        background-color: #000;
+        display: inline-block;
+        #video {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
